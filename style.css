@@ -1,0 +1,114 @@
+/* Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #011c1d 0%, #063b2f 45%, #000000 100%);
+  color: #fff;
+  padding: 20px;
+}
+
+/* Card container */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+}
+
+/* Header */
+.brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f9e27a, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.meta {
+  font-size: 0.95rem;
+  margin-top: 6px;
+  color: #eee;
+}
+
+/* About section */
+.about {
+  margin-top: 16px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+.tagline {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffe289;
+}
+.desc {
+  font-size: 0.95rem;
+  color: #dcdcdc;
+  margin-top: 6px;
+}
+
+/* Timer */
+.timer-box {
+  margin: 22px 0;
+}
+.timer-label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 8px;
+}
+#count {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffe289;
+}
+.sec {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Join button */
+.join-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 14px 36px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ffcc70 0%, #00ffbf 100%);
+  color: #092c25;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255, 204, 112, 0.3);
+  animation: fadePulse 1.6s infinite alternate;
+  transition: transform 0.25s ease;
+}
+.join-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 35px rgba(0, 255, 191, 0.35);
+}
+
+/* Fade pulse animation */
+@keyframes fadePulse {
+  from { opacity: 0.6; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.07); }
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .brand { font-size: 1.5rem; }
+  #count { font-size: 2.4rem; }
+  .join-btn { padding: 12px 26px; font-size: 0.95rem; }
+}
